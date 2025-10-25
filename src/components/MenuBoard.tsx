@@ -45,16 +45,30 @@ const MenuBoard = ({ title, items, gradient, onItemClick }: MenuBoardProps) => {
       style={{ background: gradient }}
     >
       <div
-        className="absolute -inset-[2px] rounded-[20px] -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        className="absolute -inset-[2px] rounded-[20px] -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"
         style={{
           background: "linear-gradient(45deg, #e91e63, #9575cd, #e91e63)",
           backgroundSize: "400% 400%",
           animation: "gradient-shift 3s ease infinite",
         }}
       />
-      <h3 className="text-3xl font-black text-center mb-6 uppercase tracking-wider text-shadow-[2px_2px_4px_rgba(0,0,0,0.3)]">
+      
+      {/* Sparkle effect on hover */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div className="absolute top-4 right-4 w-2 h-2 bg-white rounded-full animate-[sparkle_1s_ease-in-out_infinite]" />
+        <div className="absolute top-8 right-12 w-1.5 h-1.5 bg-white rounded-full animate-[sparkle_1s_ease-in-out_0.3s_infinite]" />
+        <div className="absolute top-12 right-8 w-1 h-1 bg-white rounded-full animate-[sparkle_1s_ease-in-out_0.6s_infinite]" />
+      </div>
+      <h3 className="text-3xl font-black text-center mb-6 uppercase tracking-wider text-shadow-[2px_2px_4px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform duration-300">
         {title}
       </h3>
+      
+      <style>{`
+        @keyframes sparkle {
+          0%, 100% { opacity: 0; transform: scale(0); }
+          50% { opacity: 1; transform: scale(1); }
+        }
+      `}</style>
       <div className="flex flex-col gap-3">
         {items.map((item, index) => (
           <div

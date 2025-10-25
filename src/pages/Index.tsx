@@ -5,6 +5,8 @@ import MenuSection from "@/components/MenuSection";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import ItemModal from "@/components/ItemModal";
+import ParticleEffect from "@/components/ParticleEffect";
+import CursorTrail from "@/components/CursorTrail";
 import { menuData } from "@/data/menuData";
 
 const Index = () => {
@@ -47,6 +49,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <ParticleEffect />
+      <CursorTrail />
       <Navigation />
       <Hero />
       <MenuSection onItemClick={handleItemClick} />

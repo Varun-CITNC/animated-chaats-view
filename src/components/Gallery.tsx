@@ -1,13 +1,19 @@
 import { useEffect, useRef, useState } from "react";
+import lassiHero from "@/assets/lassi-hero.jpg";
+import milkshakeHero from "@/assets/milkshake-hero.jpg";
+import icecreamHero from "@/assets/icecream-hero.jpg";
+import faloodaHero from "@/assets/falooda-hero.jpg";
+import strawberryShake from "@/assets/strawberry-shake.jpg";
+import mangoLassi from "@/assets/mango-lassi.jpg";
 
 const Gallery = () => {
   const images = [
-    { url: "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=800&q=80", emoji: "🥤", alt: "Lassi" },
-    { url: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80", emoji: "🍦", alt: "Ice Cream" },
-    { url: "https://images.unsplash.com/photo-1541544181051-e46607bc22a4?w=800&q=80", emoji: "🥛", alt: "Milkshake" },
-    { url: "https://images.unsplash.com/photo-1588195538326-c5b1e5b80d96?w=800&q=80", emoji: "🍨", alt: "Sundae" },
-    { url: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=800&q=80", emoji: "🍧", alt: "Dessert" },
-    { url: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800&q=80", emoji: "🍓", alt: "Strawberry" },
+    { url: lassiHero, emoji: "🥤", alt: "Premium Lassi" },
+    { url: icecreamHero, emoji: "🍦", alt: "Ice Cream Sundae" },
+    { url: milkshakeHero, emoji: "🥛", alt: "Chocolate Milkshake" },
+    { url: faloodaHero, emoji: "🍨", alt: "Falooda Special" },
+    { url: strawberryShake, emoji: "🍓", alt: "Strawberry Shake" },
+    { url: mangoLassi, emoji: "🥭", alt: "Mango Lassi" },
   ];
 
   const [titleVisible, setTitleVisible] = useState(false);
@@ -83,8 +89,15 @@ const Gallery = () => {
               alt={image.alt}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-120"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 flex items-center justify-center text-8xl opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-              {image.emoji}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 flex items-center justify-center text-8xl opacity-0 group-hover:opacity-100 transition-all duration-400">
+              <span className="group-hover:rotate-[360deg] group-hover:scale-125 transition-all duration-700">
+                {image.emoji}
+              </span>
+            </div>
+            
+            {/* Image title on hover */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 transform translate-y-4 group-hover:translate-y-0">
+              <p className="text-white text-xl font-bold text-center">{image.alt}</p>
             </div>
           </div>
         ))}

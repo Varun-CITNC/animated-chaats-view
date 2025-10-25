@@ -30,8 +30,12 @@ const Hero = () => {
       />
 
       <div className="max-w-[1200px] text-center relative z-10 opacity-0 animate-fade-in-up">
-        <div className="w-[200px] h-[200px] mx-auto mb-8 bg-gradient-to-br from-accent to-secondary rounded-full border-[5px] border-primary flex items-center justify-center text-8xl opacity-0 animate-logo-appear shadow-[0_10px_40px_rgba(233,30,99,0.5)]">
-          🥤
+        <div className="relative w-[200px] h-[200px] mx-auto mb-8">
+          {/* Rotating gradient ring */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-secondary to-primary animate-rotate-slow blur-md opacity-75" />
+          <div className="relative w-full h-full bg-gradient-to-br from-accent to-secondary rounded-full border-[5px] border-primary flex items-center justify-center text-8xl opacity-0 animate-logo-appear shadow-[0_10px_40px_rgba(233,30,99,0.5)] hover:scale-110 transition-transform duration-500">
+            🥤
+          </div>
         </div>
         <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-primary to-[hsl(340,82%,62%)] bg-clip-text text-transparent">
           The Cassi & More
