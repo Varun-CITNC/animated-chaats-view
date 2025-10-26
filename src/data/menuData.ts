@@ -1,193 +1,230 @@
+// Import all menu images
+import bananaShake from "@/assets/menu/banana-shake.jpg";
+import papayaShake from "@/assets/menu/papaya-shake.jpg";
+import mangoShake from "@/assets/menu/mango-shake.jpg";
+import strawberryShake from "@/assets/menu/strawberry-shake.jpg";
+import chocolateShake from "@/assets/menu/chocolate-shake.jpg";
+import pistaShake from "@/assets/menu/pista-shake.jpg";
+import vanillaShake from "@/assets/menu/vanilla-shake.jpg";
+import ferreroShake from "@/assets/menu/ferrero-shake.jpg";
+import butterscotchShake from "@/assets/menu/butterscotch-shake.jpg";
+import dryfruitsShake from "@/assets/menu/dryfruits-shake.jpg";
+
+import sweetLassi from "@/assets/menu/sweet-lassi.jpg";
+import bananaLassi from "@/assets/menu/banana-lassi.jpg";
+import mangoLassi from "@/assets/menu/mango-lassi.jpg";
+import chikooLassi from "@/assets/menu/chikoo-lassi.jpg";
+import saffronLassi from "@/assets/menu/saffron-lassi.jpg";
+import roseLassi from "@/assets/menu/rose-lassi.jpg";
+import strawberryLassi from "@/assets/menu/strawberry-lassi.jpg";
+import dryfruitsLassi from "@/assets/menu/dryfruits-lassi.jpg";
+
+import iceCone from "@/assets/menu/ice-cone.jpg";
+import fruitsBowl from "@/assets/menu/fruits-bowl.jpg";
+import fruitsIce from "@/assets/menu/fruits-ice.jpg";
+import chocoFudge from "@/assets/menu/choco-fudge.jpg";
+import iceRegular from "@/assets/menu/ice-regular.jpg";
+import deathChocolate from "@/assets/menu/death-chocolate.jpg";
+
+import maharajFalooda from "@/assets/menu/maharaj-falooda.jpg";
+import kesarFalooda from "@/assets/menu/kesar-falooda.jpg";
+import kulfiFalooda from "@/assets/menu/kulfi-falooda.jpg";
+import butterFalooda from "@/assets/menu/butter-falooda.jpg";
+import delhiFalooda from "@/assets/menu/delhi-falooda.jpg";
+import malaiKulfi from "@/assets/menu/malai-kulfi.jpg";
+import mangoKulfi from "@/assets/menu/mango-kulfi.jpg";
+import kesarKulfi from "@/assets/menu/kesar-kulfi.jpg";
+
 export const menuData: Record<string, { title: string; image: string; description: string; price: string }> = {
   "banana-shake": {
     title: "Banana Shake",
-    image: "https://images.unsplash.com/photo-1577805947697-89e18249d767?w=800&q=80",
+    image: bananaShake,
     description: "Creamy and rich banana milkshake blended with fresh bananas, milk, and a touch of honey. Perfect for a refreshing treat!",
     price: "₹40",
   },
   "papaya-shake": {
     title: "Papaya Shake",
-    image: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=800&q=80",
+    image: papayaShake,
     description: "Tropical papaya blended to perfection with creamy milk, creating a smooth and healthy shake packed with vitamins.",
     price: "₹40",
   },
   "mango-shake": {
     title: "Mango Amonso Shake",
-    image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&q=80",
+    image: mangoShake,
     description: "Premium Alphonso mangoes blended into a thick, luscious shake. The king of fruits in a glass!",
     price: "₹40",
   },
   "strawberry-shake": {
     title: "Very Berry Strawberry",
-    image: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800&q=80",
+    image: strawberryShake,
     description: "Fresh strawberries blended with vanilla ice cream creating a berry delicious pink paradise.",
     price: "₹50",
   },
   "chocolate-shake": {
     title: "Belgian Chocolate",
-    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800&q=80",
+    image: chocolateShake,
     description: "Rich Belgian chocolate blended with premium ice cream and milk. Pure indulgence for chocolate lovers!",
     price: "₹50",
   },
   "pista-shake": {
     title: "Resar Pista Shake",
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784587?w=800&q=80",
+    image: pistaShake,
     description: "Authentic pistachio shake with real pista nuts, creating a nutty, creamy, and aromatic experience.",
     price: "₹50",
   },
   "vanilla-shake": {
     title: "Vanilla Shake",
-    image: "https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?w=800&q=80",
+    image: vanillaShake,
     description: "Classic vanilla shake made with premium vanilla ice cream and fresh milk. Simple yet divine!",
     price: "₹50",
   },
   "ferrero-shake": {
     title: "Ferrero Rocher Shake",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80",
+    image: ferreroShake,
     description: "Luxurious shake blended with real Ferrero Rocher chocolates, hazelnuts, and chocolate chips.",
     price: "₹50",
   },
   "butterscotch-shake": {
     title: "Butterscotch Shake",
-    image: "https://images.unsplash.com/photo-1579954115563-e72bf1381629?w=800&q=80",
+    image: butterscotchShake,
     description: "Creamy butterscotch ice cream blended with crunchy caramel bits for that perfect toffee flavor.",
     price: "₹50",
   },
   "dryfruits-shake": {
     title: "Dry Fruits Shake",
-    image: "https://images.unsplash.com/photo-1610440042657-620955bb4d9e?w=800&q=80",
+    image: dryfruitsShake,
     description: "Premium shake loaded with almonds, cashews, pistachios, dates, and saffron. A royal treat!",
     price: "₹80",
   },
   "sweet-lassi": {
     title: "Sweet Lassi",
-    image: "https://images.unsplash.com/photo-1589010588553-46e8e7c21788?w=800&q=80",
+    image: sweetLassi,
     description: "Traditional sweet yogurt drink, perfectly sweetened and topped with cream. Refreshing and cooling!",
     price: "₹50",
   },
   "banana-lassi": {
     title: "Banana Cash Lassi",
-    image: "https://images.unsplash.com/photo-1622484211463-f76a4eef8c53?w=800&q=80",
+    image: bananaLassi,
     description: "Creamy lassi blended with fresh bananas and cashews for a rich, protein-packed drink.",
     price: "₹60",
   },
   "mango-lassi": {
     title: "Mango Lassi",
-    image: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=800&q=80",
+    image: mangoLassi,
     description: "Classic Indian favorite! Fresh mango pulp blended with yogurt, creating sweet summer magic.",
     price: "₹60",
   },
   "chikoo-lassi": {
     title: "Chikoo Lassi",
-    image: "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=800&q=80",
+    image: chikooLassi,
     description: "Unique lassi made with sweet sapota fruit, creating a naturally sweet and creamy beverage.",
     price: "₹60",
   },
   "saffron-lassi": {
     title: "Saffron Lassi",
-    image: "https://images.unsplash.com/photo-1594631661960-34762327295d?w=800&q=80",
+    image: saffronLassi,
     description: "Premium lassi infused with aromatic saffron strands and cardamom. A royal Indian drink!",
     price: "₹60",
   },
   "rose-lassi": {
     title: "Rose Lassi",
-    image: "https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=800&q=80",
+    image: roseLassi,
     description: "Delicate rose-flavored lassi with gulkand (rose petal jam), offering floral notes and cooling properties.",
     price: "₹60",
   },
   "strawberry-lassi": {
     title: "Strawberry Lassi",
-    image: "https://images.unsplash.com/photo-1506617420156-8e4536971650?w=800&q=80",
+    image: strawberryLassi,
     description: "Fresh strawberries blended with creamy yogurt creating a fruity, tangy, and refreshing lassi.",
     price: "₹70",
   },
   "dryfruits-lassi": {
     title: "Dry Fruits Lassi",
-    image: "https://images.unsplash.com/photo-1622484211463-f76a4eef8c53?w=800&q=80",
+    image: dryfruitsLassi,
     description: "Rich lassi loaded with mixed nuts, saffron, and cardamom. Nutritious and delicious!",
     price: "₹70",
   },
   "ice-cone": {
     title: "Ice Cream Cone",
-    image: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=800&q=80",
+    image: iceCone,
     description: "Classic ice cream served in a crispy wafer cone. Choose from various flavors!",
     price: "₹50",
   },
   "fruits-bowl": {
     title: "Fresh Fruits Bowl",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+    image: fruitsBowl,
     description: "Colorful assortment of seasonal fresh fruits, perfectly cut and served chilled.",
     price: "₹50",
   },
   "fruits-ice": {
     title: "Fruits Salad with Ice Cream",
-    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80",
+    image: fruitsIce,
     description: "Fresh fruit salad topped with scoops of vanilla ice cream. The perfect balance!",
     price: "₹80",
   },
   "choco-fudge": {
     title: "Chocolate Fudge",
-    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=800&q=80",
+    image: chocoFudge,
     description: "Double chocolate ice cream with hot fudge sauce, chocolate chips, and whipped cream.",
     price: "₹90",
   },
   "ice-regular": {
     title: "Ice Cream Regular",
-    image: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=800&q=80",
+    image: iceRegular,
     description: "Two generous scoops of your favorite ice cream flavor. Classic and satisfying!",
     price: "₹100",
   },
   "death-chocolate": {
     title: "Death by Chocolate",
-    image: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800&q=80",
+    image: deathChocolate,
     description: "Ultimate chocolate lover's dream! Layers of chocolate ice cream, brownie, fudge, and chocolate sauce.",
     price: "₹140",
   },
   "maharaj-falooda": {
     title: "Maha Raj Falooda",
-    image: "https://images.unsplash.com/photo-1576506295286-5cda18df43e7?w=800&q=80",
+    image: maharajFalooda,
     description: "Royal falooda with vermicelli, rose syrup, basil seeds, and ice cream. A majestic dessert!",
     price: "₹70",
   },
   "kesar-falooda": {
     title: "Kesar Falooda",
-    image: "https://images.unsplash.com/photo-1633933358116-a27b902fad35?w=800&q=80",
+    image: kesarFalooda,
     description: "Premium falooda infused with saffron, topped with kulfi and crunchy vermicelli.",
     price: "₹70",
   },
   "kulfi-falooda": {
     title: "Kulfi Falooda",
-    image: "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=800&q=80",
+    image: kulfiFalooda,
     description: "Traditional Indian dessert combining creamy kulfi with rose falooda and basil seeds.",
     price: "₹70",
   },
   "butter-falooda": {
     title: "Butterscotch Falooda",
-    image: "https://images.unsplash.com/photo-1557142046-c704a3adf364?w=800&q=80",
+    image: butterFalooda,
     description: "Fusion falooda with butterscotch ice cream, caramel sauce, and crunchy toppings.",
     price: "₹70",
   },
   "delhi-falooda": {
     title: "Delhi Style Falooda",
-    image: "https://images.unsplash.com/photo-1612240498367-affdf8554744?w=800&q=80",
+    image: delhiFalooda,
     description: "Authentic Delhi-style falooda loaded with extra toppings, dry fruits, and generous portions.",
     price: "₹110",
   },
   "malai-kulfi": {
     title: "Malai Kulfi",
-    image: "https://images.unsplash.com/photo-1560008581-09b9d4ab8c75?w=800&q=80",
+    image: malaiKulfi,
     description: "Traditional Indian ice cream made with condensed milk, cardamom, and pistachios.",
     price: "₹40",
   },
   "mango-kulfi": {
     title: "Mango Kulfi",
-    image: "https://images.unsplash.com/photo-1591206369811-4eeb2f03bc95?w=800&q=80",
+    image: mangoKulfi,
     description: "Creamy kulfi infused with fresh mango pulp. A summer favorite!",
     price: "₹40",
   },
   "kesar-kulfi": {
     title: "Kesar Pista Kulfi",
-    image: "https://images.unsplash.com/photo-1582716401301-b2407dc7563d?w=800&q=80",
+    image: kesarKulfi,
     description: "Premium kulfi with saffron and crushed pistachios. Rich, aromatic, and authentic!",
     price: "₹40",
   },
