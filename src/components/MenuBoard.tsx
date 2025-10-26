@@ -41,7 +41,7 @@ const MenuBoard = ({ title, items, gradient, onItemClick }: MenuBoardProps) => {
         isVisible
           ? "opacity-100 translate-y-0 scale-100"
           : "opacity-0 translate-y-20 scale-90"
-      } hover:-translate-y-4 hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(233,30,99,0.4)] group`}
+      } hover:-translate-y-4 hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(233,30,99,0.4)] group perspective-1000`}
       style={{ background: gradient }}
     >
       <div
@@ -74,13 +74,19 @@ const MenuBoard = ({ title, items, gradient, onItemClick }: MenuBoardProps) => {
           <div
             key={index}
             onClick={() => onItemClick(item.key)}
-            className="relative flex justify-between items-center p-3 border-b border-white/20 rounded-lg cursor-pointer transition-all duration-300 hover:pl-6 hover:bg-white/10 hover:border-white/60 hover:scale-[1.02] group/item"
+            className={`relative flex justify-between items-center p-3 border-b border-white/20 rounded-lg cursor-pointer transition-all duration-500 hover:pl-6 hover:bg-white/10 hover:border-white/60 hover:scale-[1.02] group/item ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+            }`}
+            style={{
+              transitionDelay: isVisible ? `${index * 100}ms` : "0ms",
+            }}
           >
-            <span className="absolute -left-7 opacity-0 transition-all duration-300 group-hover/item:left-1 group-hover/item:opacity-100">
+            <span className="absolute -left-7 opacity-0 transition-all duration-300 group-hover/item:left-1 group-hover/item:opacity-100 text-xl">
               👉
             </span>
-            <span className="font-semibold uppercase text-sm">{item.name}</span>
-            <span className="font-bold text-base">{item.price}</span>
+            <span className="font-semibold uppercase text-sm group-hover/item:text-white transition-colors duration-300">{item.name}</span>
+            <span className="font-bold text-base group-hover/item:scale-110 transition-transform duration-300">{item.price}</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover/item:translate-x-full transition-transform duration-700 pointer-events-none" />
           </div>
         ))}
       </div>

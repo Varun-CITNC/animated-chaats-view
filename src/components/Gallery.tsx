@@ -82,7 +82,10 @@ const Gallery = () => {
               visibleItems[index]
                 ? "opacity-100 scale-100 rotate-y-0"
                 : "opacity-0 scale-75 rotate-y-90"
-            } hover:scale-110 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(233,30,99,0.6)] group`}
+            } hover:scale-110 hover:-translate-y-3 hover:rotate-1 hover:shadow-[0_20px_50px_rgba(233,30,99,0.6)] group`}
+            style={{
+              transitionDelay: visibleItems[index] ? `${index * 150}ms` : "0ms",
+            }}
           >
             <img
               src={image.url}
